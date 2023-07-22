@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+  <header class="header">
+    <section class="header-content container">
+      <article class="logo">
+        <img src="./assets/favicon.svg" alt="kEnAi">
+      </article>
+      <nav class="menu">
+        <span class='nav-title'>CRUD - JAVASCRIPT VANILLA </span>
+      </nav>
+    </section>
+  </header>
+
+
+
+
+
+  <main class="main">
+    <h3 class='title'>Task List - Dashboard</h3>
+    <hr>
+    <div class='form-section'>
+      <p class='form-title'>Formulario - Agregar nueva tarea</p>
+      <form class='form'>
+        <input type="text" placeholder='Tarea' name='taskname' required>
+        <!-- <input type="text" placeholder='Estado' name='status' required> -->
+
+        <select name="status" value="status" id="status">
+          <option value='statuss' disabled>Estado</option>
+          <option value='pendiente'>Pendiente</option>
+          <option value='completada'>Completada</option>
+        </select>
+        <!-- <input type="text" placeholder='Prioridad' name='priority' required> -->
+        <select name="priority" id="priority" value="priority">
+          <option value='priorityy' disabled>Prioridad</option>
+          <option value='Baja'>Baja</option>
+          <option value='Normal'>Normal</option>
+          <option value='Alta'>Alta</option>
+        </select>
+        <br><br>
+        <textarea name="description" id="description" maxlength='255' cols="30" rows="5"
+          placeholder='Descripcion... max(255)'></textarea>
+        <input type="hidden" id='id'>
+        <br><br>
+        <input type="submit" value='Agregar' class='btn-submit'>
+      </form>
+    </div>
+
+
+    <div class='task-list'>
+      <h4>Task List</h4>
+    
+      <section class='task-list-section'>
+        <!-- Aqui va el template (Nodo importado) -->
+      </section>
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <div class='footer-container'>
+    <footer class="footer container">
+      <p>
+        <small>Created By Ivan Paez 2023 ®️</small>
+      </p>
+    </footer>
+  </div>
+
+
+  <template class='template'>
+    <div id='task-card' >
+      <p class='template-task-title'></p>
+      <p class='template-task-status'></p>
+      <p class='template-task-priority'></p>
+      <p class='template-task-description'></p>
+      
+
+      <div class='btn'>
+        <button class="edit">📝</i></button>
+        <button class="delete">🗑️</button>
+      </div>
+
+
+    </div>
+  </template>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src='./index.js'></script>
+
+</html>

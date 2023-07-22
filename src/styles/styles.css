@@ -1,0 +1,181 @@
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+main {
+	flex-grow: 1;
+}
+
+button {
+	border: 1px solid rgb(180, 176, 176);
+	background-color: white;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 992px;
+}
+
+.header {
+	padding: .5rem;
+	background-color: rgb(0, 0, 0);
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	width: 3rem;
+	height: auto;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	font-size: 115%;
+}
+
+.menu {
+	color: rgb(255, 255, 255);
+	padding: 0 1vw;
+	transition: all .3s ease-in-out;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	opacity: .75;
+}
+
+.footer-container {
+	color: white;
+	padding: 20px;
+	background-color: black;
+	text-align: center;
+}
+
+.title {
+	padding-top: 10px;
+	margin-left: 10px;
+}
+
+.form-section {
+	padding: 50px;
+	margin: 10px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn-submit {
+	color: white;
+	background-color: #13aa52;
+	border: 1px solid #13aa52;
+	border-radius: 10px;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.btn-submit:hover {
+	opacity: 0.8;
+}
+
+.no-task {
+	visibility: hidden;
+}
+
+.task-list {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.task-list-section {
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	justify-items: stretch;
+	align-items: stretch;
+	margin-bottom: 20rem;
+	padding-bottom: 10px;
+	padding: 10px;
+}
+
+#task-card {
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+.btn {
+	text-align: right;
+	padding-right: 15px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.edit,
+.delete {
+	border: none;
+	cursor: pointer;
+}
+
+.edit:hover,
+.delete:hover {
+	transform: scale(2, 2);
+}
+
+.template-task-title {
+	background-color: #2ecc71;
+	padding: 10px;
+	margin: 0%;
+	border-radius: 10px 10px 0 0;
+}
+
+.template-task-title-pending {
+	background-color: #f1c40f;
+	padding: 10px;
+	margin: 0%;
+	border-radius: 10px 10px 0 0;
+}
+
+#line {
+	padding: 0.2px;
+	background-color: black;
+}
+
+@media (width < 800px) {
+	input,
+	select {
+		margin-top: 20px;
+	}
+}
+
+@media (width > 800px) {
+	.task-list-section {
+		grid-template-columns: 1fr 300px 1fr;
+	}
+}
